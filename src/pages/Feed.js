@@ -19,11 +19,11 @@ const Feed = () => {
   //
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await axios.get(`http://localhost:8080/posts/${query}`);
+      const response = await axios.get(`https://jobmanagement-backend-production.up.railway.app/posts/${query}`);
       setPost(response.data);
     };
     const fetchInitialPosts = async () => {
-        const response = await axios.get(`http://localhost:8080/posts`);
+        const response = await axios.get(`https://jobmanagement-backend-production.up.railway.app/posts`);
         console.log(response);
         setPost(response.data);
     }
